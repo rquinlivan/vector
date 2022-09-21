@@ -31,6 +31,7 @@ impl<'a> InternalEvent for ElasticsearchResponseError<'a> {
             error_type = error_type::REQUEST_FAILED,
             stage = error_stage::SENDING,
             response = ?self.response,
+            internal_log_rate_limit = true,
         );
         counter!(
             "component_errors_total", 1,
