@@ -309,13 +309,13 @@ impl Service<PartitionInnerBuffer<Vec<Metric>, String>> for CloudWatchMetricsSvc
     type Future = BoxFuture<'static, Result<Self::Response, Self::Error>>;
 
     fn poll_ready(&mut self, _cx: &mut Context) -> Poll<Result<(), Self::Error>> {
-        // Emission of Error internal event is handled upstream by the caller
+        // Emission of an internal event in case of errors is handled upstream by the caller.
 
         Poll::Ready(Ok(()))
     }
 
     fn call(&mut self, items: PartitionInnerBuffer<Vec<Metric>, String>) -> Self::Future {
-        // Emission of Error internal event is handled upstream by the caller
+        // Emission of an internal event in case of errors is handled upstream by the caller.
 
         let (items, namespace) = items.into_parts();
         let metric_data = self.encode_events(items);

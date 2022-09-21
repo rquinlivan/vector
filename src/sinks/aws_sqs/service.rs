@@ -27,13 +27,13 @@ impl Service<SendMessageEntry> for SqsService {
     type Future = BoxFuture<'static, Result<Self::Response, Self::Error>>;
 
     fn poll_ready(&mut self, _cx: &mut Context) -> Poll<Result<(), Self::Error>> {
-        // Emission of Error internal event is handled upstream by the caller
+        // Emission of an internal event in case of errors is handled upstream by the caller.
 
         Poll::Ready(Ok(()))
     }
 
     fn call(&mut self, entry: SendMessageEntry) -> Self::Future {
-        // Emission of Error internal event is handled upstream by the caller
+        // Emission of an internal event in case of errors is handled upstream by the caller.
 
         let byte_size = entry.size_of();
         let client = self.client.clone();
