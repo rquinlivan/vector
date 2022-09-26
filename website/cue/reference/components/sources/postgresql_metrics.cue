@@ -251,7 +251,7 @@ components: sources: postgresql_metrics: {
 			tags:              _postgresql_metrics_tags_with_db
 		}
 		pg_stat_database_conflicts_total: {
-			description:       "Number of queries canceled due to conflicts with recovery in this database. (Conflicts occur only on standby servers; see `pg_stat_database_conflicts` for details.)"
+			description:       "Number of queries cancelled due to conflicts with recovery in this database. (Conflicts occur only on standby servers; see `pg_stat_database_conflicts` for details.)"
 			type:              "counter"
 			default_namespace: "postgresql"
 			tags:              _postgresql_metrics_tags_with_db
@@ -305,31 +305,31 @@ components: sources: postgresql_metrics: {
 			tags:              _postgresql_metrics_tags_with_db
 		}
 		pg_stat_database_conflicts_confl_tablespace_total: {
-			description:       "Number of queries in this database that have been canceled due to dropped tablespaces."
+			description:       "Number of queries in this database that have been cancelled due to dropped tablespaces."
 			type:              "counter"
 			default_namespace: "postgresql"
 			tags:              _postgresql_metrics_tags_with_db
 		}
 		pg_stat_database_conflicts_confl_lock_total: {
-			description:       "Number of queries in this database that have been canceled due to lock timeouts."
+			description:       "Number of queries in this database that have been cancelled due to lock timeouts."
 			type:              "counter"
 			default_namespace: "postgresql"
 			tags:              _postgresql_metrics_tags_with_db
 		}
 		pg_stat_database_conflicts_confl_snapshot_total: {
-			description:       "Number of queries in this database that have been canceled due to old snapshots."
+			description:       "Number of queries in this database that have been cancelled due to old snapshots."
 			type:              "counter"
 			default_namespace: "postgresql"
 			tags:              _postgresql_metrics_tags_with_db
 		}
 		pg_stat_database_conflicts_confl_bufferpin_total: {
-			description:       "Number of queries in this database that have been canceled due to pinned buffers."
+			description:       "Number of queries in this database that have been cancelled due to pinned buffers."
 			type:              "counter"
 			default_namespace: "postgresql"
 			tags:              _postgresql_metrics_tags_with_db
 		}
 		pg_stat_database_conflicts_confl_deadlock_total: {
-			description:       "Number of queries in this database that have been canceled due to deadlocks."
+			description:       "Number of queries in this database that have been cancelled due to deadlocks."
 			type:              "counter"
 			default_namespace: "postgresql"
 			tags:              _postgresql_metrics_tags_with_db

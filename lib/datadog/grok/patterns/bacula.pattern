@@ -33,10 +33,10 @@ BACULA_LOG_NOPRUNE_FILES No Files found to prune.
 BACULA_LOG_VOLUME_PREVWRITTEN Volume \"%{BACULA_VOLUME:volume}\" previously written, moving to end of data.
 BACULA_LOG_READYAPPEND Ready to append to end of Volume \"%{BACULA_VOLUME:volume}\" size=%{INT}
 BACULA_LOG_CANCELLING Cancelling duplicate JobId=%{INT}.
-BACULA_LOG_MARKCANCEL JobId %{INT}, Job %{BACULA_JOB:job} marked to be canceled.
+BACULA_LOG_MARKCANCEL JobId %{INT}, Job %{BACULA_JOB:job} marked to be cancelled.
 BACULA_LOG_CLIENT_RBJ shell command: run ClientRunBeforeJob \"%{GREEDYDATA:runjob}\"
 BACULA_LOG_VSS (Generate )?VSS (Writer)?
-BACULA_LOG_MAXSTART Fatal error: Job canceled because max start delay time exceeded.
+BACULA_LOG_MAXSTART Fatal error: Job cancelled because max start delay time exceeded.
 BACULA_LOG_DUPLICATE Fatal error: JobId %{INT:duplicate} already running. Duplicate job not allowed.
 BACULA_LOG_NOJOBSTAT Fatal error: No Job status returned from FD.
 BACULA_LOG_FATAL_CONN Fatal error: bsock.c:133 Unable to connect to (Client: %{BACULA_HOST:client}|Storage daemon) on %{HOSTNAME}:%{POSINT}. ERR=(?<berror>%{GREEDYDATA})

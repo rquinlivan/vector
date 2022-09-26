@@ -2834,7 +2834,7 @@ lookup = {
   "fd" : "failed_delegation",
   "fdeac" : "failed_device_activation",
   "fdeaz" : "failed_device_authorization_request",
-  "fdecc" : "user_canceled_device_confirmation",
+  "fdecc" : "user_cancelled_device_confirmation",
   "fdu" : "failed_user_deletion",
   "feacft" : "failed_exchange_authorization_code_for_access_token",
   "feccft" : "failed_exchange_access_token_for_client_credentials_grant",
